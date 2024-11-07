@@ -73,8 +73,8 @@ $addressed = $_REQUEST['addressed'];
    <body>
      <iframe width="100%" height="1000px" class="resume-iframe"></iframe>
 
-     <script src="http://rcs-productions.eastus.cloudapp.azure.com/jsPDF-master/dist/html2canvas.min.js"></script>
-     <script src="http://rcs-productions.eastus.cloudapp.azure.com/resume-download/jsPDF-master/dist/jspdf.min.js"></script>
+     <script src="https://rm-cortez.github.io/jsPDF-master/dist/html2canvas.min.js"></script>
+     <script src="https://rm-cortez.github.io/resume-download/jsPDF-master/dist/jspdf.min.js"></script>
      <script type="text/javascript">
 
 

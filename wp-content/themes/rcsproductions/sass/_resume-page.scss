@@ -1,0 +1,167 @@
+/*resume page*/
+.page-template-resume{
+
+
+
+    div.resume-intro{
+      background: $off_grey_color;
+
+
+
+      img{
+        margin-bottom: 20px;
+
+        &:not([src*="closeup"]) {
+          border-radius: 10%;
+          border: 5px solid #000;
+          opacity: 0.9;
+        }
+      }
+
+      p{
+        line-height: 25px;
+
+        &.header-1{
+          font-size: $h1-header;
+        }
+
+        &:not(.header-1){
+          font-size:$h3-header;
+        }
+
+      }
+    }
+
+    /*schools section*/
+    .resume-post-schools{
+      .card-body{
+        p{
+          &:first-child{
+            font-size: $h4-header;
+
+          }
+
+          &:not(:first-child){
+            margin-bottom: 0;
+            font-weight: 300;
+          }
+        }
+
+        .btn-excerpt{
+
+            background: $white_color;
+            & > i,
+            &:active > i{
+              color: $black_color;
+            }
+
+        }
+
+        .excerpt-container{
+          position: absolute;
+          bottom: 15px;
+          right: 15px;
+        }
+      }
+      .card.mb-4{
+        overflow: hidden;
+
+        svg{
+          fill:#1a1410;
+          &.img-hccc{
+            fill: $black_color;
+          }
+          &.img-msu{
+            fill: $light_green_color;
+          }
+          &.img-njit{
+            fill:  $blueish_color;
+          }
+        }
+
+
+        &> img{
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          top:25%;
+      }
+
+      }
+
+    }
+
+
+  .popover > .popover-body{
+    font-weight: 300;
+  }
+
+
+
+  .resume-post-content{
+
+      .lng-block-spanish{
+
+        .list-group-item:first-child,
+        .list-group-item+.list-group-item{
+          border-left: none;
+          border-right: none;
+
+        }
+
+        .list-group,
+        .list-group-item:first-child{
+          border-top: none;
+        }
+
+        .list-group-item+.list-group-item:last-child{
+          border-bottom: none;
+        }
+
+        .list-group{
+          margin-left: 0;
+        }
+      }
+  }
+
+
+  .download-icon{
+    bottom:10px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    width: 30px;
+
+    a,
+    a:active {
+      color:#000;
+    }
+
+    &:hover{
+      background:#ebf0f2;
+      a{
+        color:#1e84d0;
+        &:focus{
+          color:#7FE5F0;
+        }
+      }
+    }
+  }
+
+  #resumeModal{
+    .modal-dialog{
+      min-width: 90%;
+    }
+    .modal-body {
+      max-height: 80vh;
+      padding: 0 5px;
+      overflow-y: auto;
+    }
+  }
+
+  .resume-post-jobs{
+    ul li {
+        margin-bottom: 5px;
+    }
+  }
+}

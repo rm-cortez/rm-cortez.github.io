@@ -1,0 +1,271 @@
+/*
+* If it does not compile, run source ~/.profile on
+* sass --watch sass/styles.scss css/custom-css.css
+* sass sass/styles.scss css/custom-css.css
+*
+*/
+/*Variables*/
+/*njit*/
+/*hccc*/
+/*njit*/
+/*msu*/
+.banner-container {
+  background: #e9ecef;
+  color: #1a1410;
+}
+
+/*banner container*/
+/*.home{}*/
+.banner-text-container p {
+  animation: banner-p 2s ease-in;
+}
+
+.logo-container {
+  overflow: hidden;
+}
+.logo-container .custom-logo-link {
+  animation: logo-link 2s ease-in;
+}
+
+@keyframes banner-p {
+  0% {
+    transform: translate(-100%);
+  }
+  100% {
+    transform: translate(0%);
+  }
+}
+@keyframes logo-link {
+  0% {
+    transform: translate(-115%);
+  }
+  80% {
+    transform: translate(0%);
+  }
+}
+body {
+  margin-bottom: 0 !important;
+  background-image: url("../img/bg-image.jpg");
+}
+
+main.site-main {
+  padding-bottom: 60px;
+}
+
+.rcsproductions_footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+/*navbar*/
+.navbar.navbar-dark {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.navbar.navbar-dark a {
+  text-transform: capitalize;
+  color: #fff;
+}
+.navbar.navbar-dark a:visited {
+  color: #fff;
+}
+.navbar.navbar-dark a:hover {
+  text-decoration: none;
+}
+.navbar.navbar-dark a > img {
+  margin-right: 10px;
+}
+.navbar.navbar-dark li {
+  margin-right: 20px;
+}
+.navbar.navbar-dark li.current-menu-item {
+  border-bottom: 2px solid #fff;
+}
+.navbar.navbar-dark li > a {
+  line-height: 30px;
+}
+.navbar.navbar-dark .nav-bar-icon {
+  margin-top: -7px;
+}
+.navbar.navbar-dark .navbar-collapse ul.mr-auto {
+  margin-right: 0 !important;
+  margin-left: auto !important;
+}
+
+/*Logo*/
+.logo-container {
+  background: #0B0F12;
+  border: 1px solid #c0c0c0;
+  border-radius: 25%;
+  box-shadow: 10px 5px 5px #c0c0c0;
+  padding: 20px 20px 30px 20px;
+  width: 200px;
+}
+
+/*media query*/
+@media all and (max-width: 767px) {
+  .navbar.navbar-dark li.current-menu-item {
+    border-bottom: none;
+  }
+  .navbar.navbar-dark li a {
+    text-decoration: underline;
+  }
+
+  .banner-container .banner-text-container {
+    display: none;
+  }
+
+  /*jobs section*/
+  .resume-post-jobs ul {
+    margin-left: 0;
+  }
+
+  /*Resum Page Modal Icon*/
+  .download-icon .resume-dw-lg {
+    display: none;
+  }
+}
+/*767-media-query block*/
+@media all and (min-width: 768px) {
+  /*Resum Page Modal Icon*/
+  .download-icon .resume-dw-lg {
+    display: block;
+  }
+
+  .download-icon .resume-dw-small {
+    display: none;
+  }
+}
+/*768-media-query block*/
+@media all and (max-width: 992px) {
+  /*resume post section*/
+  .resume-post-content .skills-block .skill-group-item {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+/*992-media-query block */
+/*resume page*/
+.page-template-resume {
+  /*schools section*/
+}
+.page-template-resume div.resume-intro {
+  background: #e9ecef;
+}
+.page-template-resume div.resume-intro img {
+  margin-bottom: 20px;
+}
+.page-template-resume div.resume-intro img:not([src*=closeup]) {
+  border-radius: 10%;
+  border: 5px solid #000;
+  opacity: 0.9;
+}
+.page-template-resume div.resume-intro p {
+  line-height: 25px;
+}
+.page-template-resume div.resume-intro p.header-1 {
+  font-size: 2.5rem;
+}
+.page-template-resume div.resume-intro p:not(.header-1) {
+  font-size: 1.75rem;
+}
+.page-template-resume .resume-post-schools .card-body p:first-child {
+  font-size: 1.5rem;
+}
+.page-template-resume .resume-post-schools .card-body p:not(:first-child) {
+  margin-bottom: 0;
+  font-weight: 300;
+}
+.page-template-resume .resume-post-schools .card-body .btn-excerpt {
+  background: #fff;
+}
+.page-template-resume .resume-post-schools .card-body .btn-excerpt > i, .page-template-resume .resume-post-schools .card-body .btn-excerpt:active > i {
+  color: #1a1410;
+}
+.page-template-resume .resume-post-schools .card-body .excerpt-container {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+.page-template-resume .resume-post-schools .card.mb-4 {
+  overflow: hidden;
+}
+.page-template-resume .resume-post-schools .card.mb-4 svg {
+  fill: #1a1410;
+}
+.page-template-resume .resume-post-schools .card.mb-4 svg.img-hccc {
+  fill: #1a1410;
+}
+.page-template-resume .resume-post-schools .card.mb-4 svg.img-msu {
+  fill: #f5ffe4;
+}
+.page-template-resume .resume-post-schools .card.mb-4 svg.img-njit {
+  fill: #7fe5f0;
+}
+.page-template-resume .resume-post-schools .card.mb-4 > img {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 25%;
+}
+.page-template-resume .popover > .popover-body {
+  font-weight: 300;
+}
+.page-template-resume .resume-post-content .lng-block-spanish .list-group-item:first-child,
+.page-template-resume .resume-post-content .lng-block-spanish .list-group-item + .list-group-item {
+  border-left: none;
+  border-right: none;
+}
+.page-template-resume .resume-post-content .lng-block-spanish .list-group,
+.page-template-resume .resume-post-content .lng-block-spanish .list-group-item:first-child {
+  border-top: none;
+}
+.page-template-resume .resume-post-content .lng-block-spanish .list-group-item + .list-group-item:last-child {
+  border-bottom: none;
+}
+.page-template-resume .resume-post-content .lng-block-spanish .list-group {
+  margin-left: 0;
+}
+.page-template-resume .download-icon {
+  bottom: 10px;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  width: 30px;
+}
+.page-template-resume .download-icon a,
+.page-template-resume .download-icon a:active {
+  color: #000;
+}
+.page-template-resume .download-icon:hover {
+  background: #ebf0f2;
+}
+.page-template-resume .download-icon:hover a {
+  color: #1e84d0;
+}
+.page-template-resume .download-icon:hover a:focus {
+  color: #7FE5F0;
+}
+.page-template-resume #resumeModal .modal-dialog {
+  min-width: 90%;
+}
+.page-template-resume #resumeModal .modal-body {
+  max-height: 80vh;
+  padding: 0 5px;
+  overflow-y: auto;
+}
+.page-template-resume .resume-post-jobs ul li {
+  margin-bottom: 5px;
+}
+
+.sidebar-elements h2 {
+  text-decoration: underline;
+}
+.sidebar-elements p:first-line {
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=custom-css.css.map */

@@ -1,0 +1,31 @@
+.banner-container{
+  background: $off_grey_color;
+  color:$black_color;
+}/*banner container*/
+
+/*.home{}*/
+  .banner-text-container{
+    p{
+      animation: banner-p 2s ease-in ;
+    }
+  }
+
+  .logo-container{
+    overflow: hidden;
+
+    .custom-logo-link{
+      animation: logo-link 2s ease-in;
+    }
+  }
+
+
+
+@keyframes banner-p {
+  0%   {transform: translate(-100%)}
+  100% {transform: translate(0%)}
+}
+
+@keyframes logo-link {
+  0%   {transform: translate(-115%)}
+  80% {transform: translate(0%)}
+}

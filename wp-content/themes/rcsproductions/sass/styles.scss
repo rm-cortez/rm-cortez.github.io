@@ -1,0 +1,15 @@
+/*
+* If it does not compile, run source ~/.profile on
+* sass --watch sass/styles.scss css/custom-css.css
+* sass sass/styles.scss css/custom-css.css
+*
+*/
+@import 'variables';
+@import 'banner';
+@import'content';
+@import 'footer';
+@import 'navbar';
+@import 'logo';
+@import 'media-query';
+@import 'resume-page';
+@import 'sidebar';

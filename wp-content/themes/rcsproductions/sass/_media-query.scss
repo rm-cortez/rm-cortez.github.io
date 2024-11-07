@@ -1,0 +1,61 @@
+/*media query*/
+@media all and (max-width:767px ){
+
+  .navbar.navbar-dark{
+    li{
+      &.current-menu-item {
+       border-bottom: none;
+     }
+
+     a{
+       text-decoration: underline;
+     }
+    }
+  }
+
+  .banner-container{
+
+    .banner-text-container{
+      display: none ;
+    }
+
+  }
+
+  /*jobs section*/
+  .resume-post-jobs{
+    ul{
+      margin-left: 0;
+    }
+  }
+
+  /*Resum Page Modal Icon*/
+  .download-icon .resume-dw-lg{
+    display:none;
+  }
+
+}/*767-media-query block*/
+
+@media all and (min-width:768px){
+  
+  /*Resum Page Modal Icon*/
+  .download-icon .resume-dw-lg{
+    display:block;
+  }
+  .download-icon .resume-dw-small{
+    display:none;
+  }
+}/*768-media-query block*/
+
+@media all and (max-width:992px ){
+  /*resume post section*/
+  .resume-post-content{
+    .skills-block{
+      .skill-group-item{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+  }
+}/*992-media-query block */

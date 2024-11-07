@@ -33,7 +33,7 @@ At Verizon, I collaborated on many projects. Tasks involved adding new features 
 
 If I am hired at Person, I would like to eventually become a Senior Software Engineer and I would set my goals based on productivity and performance.
 
-At Verizon, I held a fully remote job position and worked on web based applications. At CHNews I worked on both Desktop and Web Based applications. My salary expectation is $80,000. My personal website is http://rcsproductions.us , please feel free to review it.
+At Verizon, I held a fully remote job position and worked on web based applications. At CHNews I worked on both Desktop and Web Based applications. My salary expectation is $80,000. My personal website is https://rm-cortez.github.io/ , please feel free to review it.
 
 Thanks
 */

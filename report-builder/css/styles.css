@@ -1,0 +1,170 @@
+body{
+  overflow-x: hidden;
+  padding-bottom: 60px;
+}
+.main-content .row.no-gutters.choose-project{
+  margin-top: 0 !important;
+}
+div::empty{
+  margin-bottom:0;
+}
+.bg-yellow{
+  background: #FFFF00;
+
+}
+.bg-purple{
+  background: #795A7E;
+}
+.site-nav{
+  background: #3299DC;
+  height:65px;
+  overflow: hidden;
+}
+.site-nav ul{
+  display: flex;
+}
+.site-nav ul li{
+  padding-left: 10px;
+  padding-top:5px;
+  border: none;
+}
+.site-nav ul li a{
+  color:#fff;
+  font-size: 1rem;
+}
+.site-nav ul li:hover a{
+  color:#ddd;
+}
+.site-nav ul li a:hover{
+  text-decoration: none;
+}
+canvas{
+  height: 20% !important;
+  width:60% !important;
+  margin:auto;
+}
+
+.choose-project-section > p{
+  font-size:1.25rem;
+}
+label > input{
+  opacity: 0;
+}
+label > input + span:after{
+  content:'\f096';
+  font-family: FontAwesome;
+  position: absolute;
+  left: 0;
+  transition: transform 1s;
+}
+label > input:checked + span:after{
+  color:#dc3545;
+  content:'\f14a';
+  transform: rotate(360deg);
+}
+footer{
+  position: fixed;
+  bottom:0;
+  width: 100%;
+}
+table th{
+  text-transform: capitalize;
+}
+.years-section,
+.months-section,
+.days-section{
+  align-items: center;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.years-section button,
+.months-section button,
+.days-section button{
+  margin-right:10px;
+  margin-bottom: 10px;
+  min-width:34px;
+}
+.btn.disabled, .btn:disabled {
+    cursor: not-allowed;
+}
+.project-ul{
+  display: flex;
+  list-style: none;
+  margin-bottom:5px;
+  padding-left: 0
+}
+.project-ul li{
+  margin-right: 20px;
+}
+.project-ul li span{
+  margin-left: 5px;
+}
+input[type="radio"] + span{
+  text-transform: uppercase;
+}
+table td{
+  text-transform: capitalize;
+}
+.report-table > .report-details{
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+.report-details p{
+  text-transform: capitalize;
+}
+
+.report-details .details p:not(:last-child){
+  margin-bottom:0;
+}
+
+table tr.tr-values:nth-child(even){
+  background:#f8f9fa;
+}
+
+.daily span.month::before{
+  content: '/';
+  margin: 0 5px;
+}
+
+.daily span.month::after,
+.monthly span.month::after {
+    content: '/';
+    margin: 0 5px;
+}
+p.p-project{
+  text-transform: uppercase;
+}
+
+.dashboard-intro {
+  background: #7FDBFF;
+}
+.dashboard-intro .text-center > p {
+    color: #fff;
+    margin:0;
+}
+.dashboard-intro .text-center > p:first-child {
+    color: #000;
+    font-weight: bold;
+
+}
+.dashboard-intro .text-center {
+    padding: 10px 0;
+}
+@media all and (max-width:767px){
+  .project-ul + button{
+    line-height: 15px;
+  }
+  table tr,
+  table th,
+  table td{
+    display: block;
+    width:100%;
+    max-width: 100%
+  }
+  canvas{
+    height: 100% !important;
+    width:100% !important;
+  }
+}

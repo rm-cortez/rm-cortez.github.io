@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" id="rcsproductions-Bootstrap-style-css" href="http://rcsproductions.us/wp-content/themes/rcsproductions/css/bootstrap.min.css?ver=5.4.2" media="all">
+    <link rel="stylesheet"  href="assets/css/styles.css" media="all">
+    <link rel="stylesheet"  href="assets/animate.css/animate.min.css" media="all">
+    <link rel="stylesheet" id="rcsproductions-fontawesome-style-css" href="assets/css/font-awesome.min.css" media="all">
+    <link rel="icon" href="http://rcsproductions.us/wp-content/uploads/2020/06/fabicon.ico" sizes="32x32">
+    <title>RCSProductions</title>
+
+
+    <script
+      type="module"
+      src="scripts/pwa-elements/dist/ionicpwaelements/ionicpwaelements.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="scripts/pwa-elements/dist/ionicpwaelements/ionicpwaelements.js"
+    ></script>
+
+<style>
+  #imageUpload{
+    width:25%;
+    padding: 0;
+  }
+  .result-div{
+    min-height: 150px;
+  }
+
+  .img-div{
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+
+  </head>
+  <body class="bg-dark pt-4">
+    <main>
+      <div class="container bg-white rounded shadow p-4 my-4">
+        <div class="row">
+          <div class="col-md-12">
+            <button type="button" class="btn btn-sm btn-primary float-right"  onclick="takePhoto()">Scan</button>
+            <input type="file"
+                    id="imageUpload"
+                    class="form-control form-control-sm"
+                    onchange="loadImage()"
+                    accept="image/*" />
+          </div>
+
+          <div class="col-md-12 text-center bg-dark my-4 rounded py-4 img-div">
+              <img id="img" src="scripts/cropped-logo.png" alt="" width="250">
+          </div>
+
+          <div class="col-md-12 text-white bg-dark  rounded py-4 result-div">
+            <h2>Result:</h2>
+            <p id="result"></p>
+          </div>
+
+        </div>
+      </div>
+
+      <footer>
+        <div  class="bg-light">
+          <div class="col-md-12 text-center p-3 text-dark font-weight-bold ">
+            <a href="/" class="">RCSProductions <i class="fa fa-copyright font-weight-bold"></i></a> |
+            <script> document.write(new Date().getFullYear())</script>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="http://rcsproductions.us/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp"></script>
+    <script src="http://rcsproductions.us/wp-content/themes/rcsproductions/js/bootstrap.min.js?ver=5.4.2"></script>
+    <script src="http://rcsproductions.us/wp-content/themes/rcsproductions/js/bootstrap.bundle.min.js?ver=5.4.2"></script>
+    <script src="http://rcsproductions.us/wp-content/themes/rcsproductions/js/analytics.js"></script>
+
+
+    <!-- <script src="scripts/common-js/common.js"></script>
+    <script src="scripts/main.js" type="module"></script> -->
+
+
+    <script src="scripts/capacitor.js"></script>
+    <script data-main="scripts/main.js" src="scripts/require.js"></script>
+    <script type="text/javascript">
+
+    function takePhoto(){
+
+      //console.log("capacitor", Capacitor.Plugins)
+      Capacitor.Plugins.Camera.getPhoto({
+        resultType: 'base64',
+        source: 'CAMERA',
+        quality: 100
+
+      })
+      .then(img => {
+        console.log("img", img)
+        let base64Img = `data:image/${img.format};base64,${img.base64String}`
+        document.querySelector('#img').src = base64Img
+
+        readImage()
+      } )
+
+    }
+
+    function loadImage(){
+      var file = document.querySelector('#imageUpload')
+      //console.log(file.files[0])
+
+      document.querySelector('#img').src = window.URL.createObjectURL(file.files[0])
+
+      readImage()
+    }
+    </script>
+
+
+  </body>
+</html>

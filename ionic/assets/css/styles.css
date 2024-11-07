@@ -1,0 +1,114 @@
+.home-header{
+  background: #222428;
+}
+.home-header ion-thumbnail {
+    position: absolute;
+    top: 6px;
+    z-index: 11;
+    right: 15px;
+}
+
+.home-header {
+    padding-right: 80px;
+}
+
+.home-link-color{
+  color: #fff;
+}
+
+.home-view-grid{
+  border: 5px dashed #000;
+  margin: 20px;
+  padding: 0 20px;
+  min-height: 80vh;
+}
+.db-error-h1{
+  border: 1px dashed;
+  padding: 10px 0;
+  text-align: center;
+  margin-bottom: 20px;
+  background: #dee2e6;
+}
+.gallery-view-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  border: 1px dashed;
+  padding-left: 0;
+  background: #dee2e6;
+}
+
+.gallery-view-list li {
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.link-color{
+  color: #3dc2ff;
+}
+
+.link-color,
+.home-link-color{
+  position: relative;
+  top:1px;
+  margin-right: 10px;
+}
+
+a.home-link-color::after {
+    content: "|";
+    margin-left: 15px;
+    color: #fff;
+    position: relative;
+    top: -2px;
+}
+
+.img-decoration{
+  border:1px solid dashed !important;
+  padding:10px;
+}
+
+.photo-container{
+  border:5px;
+  border-color:#000;
+  border-style:dashed;
+  padding:20px;
+  text-align:center;
+  background-color:#333;
+  opacity:.9
+}
+
+.photo-div{
+  width: 24%;
+  border: 3px dashed #000;
+  margin: 5px;
+  padding: 5px;
+  background: #dee2e6;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.camera-btn-row{
+  align-items: center;
+  background: #dee2e6;
+  border:5px dashed #000;
+  display: flex;
+  margin:10px;
+  min-height: 30vh;
+
+}
+
+.photo-row{
+  align-items: center;
+  display: flex;
+  min-height: 50vh;
+}
+
+
+
+@media all and (min-width:768px){
+  .photo-container img{
+    height:350px !important;
+  }
+}

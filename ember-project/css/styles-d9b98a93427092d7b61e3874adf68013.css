@@ -1,0 +1,142 @@
+html {
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  height: 100%;
+}
+
+.logo-container {
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 62px;
+    background: #343a40;
+    border: 1px solid #343a40;
+}
+
+.mdc-top-app-bar__section{
+  padding-left: 0;
+  overflow: hidden;
+}
+
+.mdc-top-app-bar__section .mdc-fab::before{
+  z-index: -1;
+}
+
+.mdc-top-app-bar__section .mdc-fab{
+  color:#343a40;
+}
+
+.mdc-top-app-bar__section .mdc-fab:hover,
+.mdc-top-app-bar__section .mdc-fab:focus{
+  background: #fff;
+}
+
+
+
+.mdc-top-app-bar .project-title{
+  top:-7px;
+}
+
+.mdc-top-app-bar__title{
+    padding-left: 0;
+}
+
+.requirements-div ol,
+ul{
+  padding-left: 0;
+  margin-left: 20px;
+}
+
+.requirements-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.log-total {
+    width: 140px;
+    margin-right: 0;
+    display: inline-block;
+}
+
+.mdc-snackbar__label {
+  display: flex;
+  justify-content: center;
+}
+
+.mdc-drawer--modal{
+  position: fixed;
+  top:0;
+  bottom: 0;
+}
+
+.mdc-drawer__header {
+    border-bottom: 1px solid #000;
+    margin-bottom: 10px;
+}
+
+.produce-div{
+  position: relative;
+}
+
+.log-overview {
+  white-space: pre-line;
+}
+
+.ConsumeView-div .mdc-button{
+  margin: 25px 0;
+}
+
+.mdc-slider{
+  margin: 0;
+}
+.mdc-slider .mdc-slider__thumb{
+  display: none;
+}
+
+.slider-div{
+  min-height: 48px;
+  margin-bottom: -12px;
+}
+
+.slider-div + ul{
+  margin-top: 0;
+}
+
+.hideSlider{
+  display: none;
+}
+
+.mdc-tab-active > span{
+  color: #6200ee !important;
+}
+
+@media all and (max-width:480px){
+  .mdc-tab__text-label {
+    display: none;
+  }
+  .mdc-tab {
+    padding: 0;
+    min-width: 70px;
+  }
+  .mdc-top-app-bar__title{
+    font-size: 13px;
+  }
+  .mdc-layout-grid__cell--span-12{
+    width: 100%;
+  }
+
+  pre {
+    white-space: pre-line;       /* css-3 */
+    white-space: -moz-pre-line;  /* Mozilla, since 1999 */
+    white-space: -pre-line;      /* Opera 4-6 */
+    white-space: -o-pre-line;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  }
+}

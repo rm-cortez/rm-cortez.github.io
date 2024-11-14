@@ -17,6 +17,13 @@
   line-height: 30px;
 }
 
+.main-bg{
+  background-color: #343a40!important;
+  background-image: url(https://rm-cortez.github.io/assets/img/night-time.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 
 .about-me-div .div-underline{
   width: 140px;

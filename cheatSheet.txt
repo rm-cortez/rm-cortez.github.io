@@ -1411,6 +1411,21 @@ angular
 
 interpolation
 ---------------------------
+
+{{title}}
+<div class="" [class]=" expression? '':'' "></div>
+(click)="rbChangeHandler($event)
+id="{{this.question.answers[0]}}"
+
+import { NgFor } from '@angular/common';
+@Component({
+  selector: 'app-card',
+  standalone: true,
+  imports: [NgFor],
+
+})
+
+
 app.component.ts
 export class AppComponent {
   title = 'angular-project'

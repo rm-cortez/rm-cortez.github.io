@@ -1121,6 +1121,11 @@ To import from a CSV file to a table
 
 Google maps
 
+
+Angular 
+
+declare var google;
+
 Creates map
 ---------
  HTML

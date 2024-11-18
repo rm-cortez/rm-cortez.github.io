@@ -16669,3 +16669,20 @@ Earlier, we talked about "one-way data flow", which describes this sequence of s
 
 
 
+Javascript 
+
+passing extra parameters to event listeners
+
+
+marker.addListener('click', function(e:any){
+          
+  console.log('marker',e.mapref)
+  marker.iw.open(e.mapref, marker);
+  //             --------
+})
+
+marker.mapref = this.map
+
+
+------------------
+

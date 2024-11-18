@@ -23,10 +23,11 @@
       <div class="container bg-white rounded shadow p-4 my-4">
         <div class="row">
           <div class="col-md-5 ">
-            <div class="profile-pic-div animate__animated animate__backInDown">
+            <div class="profile-pic-div animate__animated" id="pageImage">
               <img
-              src="https://rm-cortez.github.io/wp-content/uploads/2020/08/IMG_3071.PNG" 
+              src="https://rm-cortez.github.io/images/xmas.png" 
               alt="Ronald Cortez"
+              
               >
             </div>
           </div>
@@ -197,5 +198,68 @@
     <script src="https://rm-cortez.github.io/wp-content/themes/rcsproductions/js/bootstrap.min.js?ver=5.4.2"></script>
     <script src="https://rm-cortez.github.io/wp-content/themes/rcsproductions/js/bootstrap.bundle.min.js?ver=5.4.2"></script>
     <script src="https://rm-cortez.github.io/wp-content/themes/rcsproductions/js/analytics.js"></script>
+
+    <script>
+
+      function shuffle(numLength) {
+
+      var array= []
+
+      for(var idx =0;idx < numLength;idx++){
+        array.push(idx)
+      }
+
+
+      let currentIndex = array.length;
+
+      // While there remain elements to shuffle...
+      while (currentIndex != 0) {
+
+        // Pick a remaining element...
+        let randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        // And swap it with the current element.
+        [array[currentIndex], array[randomIndex]] = [
+          array[randomIndex], array[currentIndex]];
+      }
+
+      return array
+      }
+
+
+      var images = [
+          'IMG_3071.PNG',    
+          'IMG_3070.JPG', 
+          'IMG_3072.PNG' ,
+          'IMG_3171.jpg' ,
+          'IMG_3174.jpg' ,
+          'IMG_3177.JPG' ,
+          'IMG_3178.JPG' ,
+          'xmas.png'
+      ]
+
+      var shuffledIdx = shuffle(images.length)
+
+      //console.log(shuffledIdx[0],images[shuffledIdx[0]])
+      var imgUrl = `https://rm-cortez.github.io/images/${images[shuffledIdx[0]]}`
+
+
+
+      //animate__backInDown
+
+      var imgSelector = (document.querySelector('#pageImage > img'))
+      imgSelector.src = imgUrl
+      
+      //console.log(imgSelector,imgUrl)
+      
+
+      var divSelector = (document.querySelector('#pageImage'))
+      divSelector.classList.add('animate__backInDown')
+
+
+
+
+  </script>
   </body>
 </html>

@@ -16691,3 +16691,22 @@ marker.mapref = this.map
 document.write("Hello World!");
 
 
+----------
+svelte 
+
+npx sv create myapp
+cd myapp
+npm install
+npm run dev
+
+vite.config.js contains the Vite configuration. Because SvelteKit uses Vite, you can use Vite features like hot module replacement, TypeScript support, static asset handling and so on.
+
+src is where your app’s source code goes. src/app.html is your page template (SvelteKit replaces the %sveltekit.head% and %sveltekit.body% as appropriate), and src/routes defines the routes of your app.
+
+Finally, static contains any assets (like a favicon.png or a robots.txt) 
+
+.sveltekit/static 
+href="%sveltekit.assets%/favicon.png"
+
+.sveltekit/src/routes/+page
+%sveltekit.body%

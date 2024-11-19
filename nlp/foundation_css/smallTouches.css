@@ -1,0 +1,159 @@
+/* some small touches */
+
+body{
+
+	background-image:url(../images/blk1.jpg);
+	margin-bottom:15px;
+}
+
+.pad-bot{
+	padding-bottom:30px;
+}
+
+.logo-bg{
+	border:1px dashed white;
+	border-radius:5px;
+	padding-top:30px;
+}
+
+.main-bg{
+	border:1px dashed white;
+	border-radius:5px;
+}
+
+.nav-bar li.active.red{
+	background:#c60f13; 
+	border: 1px solid #7f0a0c;
+}
+
+.nav-bar li.border{
+	border: 1px solid #222222;
+}
+
+ul.nav-bar.blk{
+	background: #222222;
+}
+
+
+.border-ln{
+	border:1;
+	border-color:white;
+	border-width:2px;
+}
+
+
+.r-pan{
+	border:1px dashed white;
+	border-radius:5px;
+	background: #222222;
+	padding-bottom:5px;
+}
+
+.l-pan{
+	border:1px dashed white;
+	border-radius:5px;
+	min-height:200px;
+	background: black;
+}
+
+.margin_top{
+	margin-top:15px;
+}
+
+
+
+
+.center{
+	text-align:center;
+}
+
+
+
+
+.underln{
+	text-decoration:underline;
+}
+
+.font-w{
+	color:white;
+	font-size:23pt;
+	font-weight:bolder;
+}
+
+div.panel.rad{
+	border-radius:5px;
+	background-color:black;
+	color: #fff;
+	border: 1px solid #222222;
+}
+/*services section*/
+.services-bg{
+	text-align:center;
+	border-radius: 5px;
+	background-color:white;
+	margin-left:15px;
+	min-height:400px;
+}
+
+/*treatments section*/
+.treatments-bg{
+	border-radius: 5px;
+	background-color:white;
+	margin-left:15px;
+	min-height:400px;
+}
+
+div.panel.callout.rad1 ul{
+	text-align:center;
+
+}
+
+div.panel.callout.rad1 ul li{
+	list-style-position:inside;
+
+}
+
+div.four.columns.centered.main-bg ul{
+	text-align:center;
+}
+
+
+.pad-lr{
+	padding-right:20px;
+	padding-left:20px
+}
+
+textarea { min-height: 180px; }
+
+
+#rcs{
+	background:#222222;
+	color:white;
+	
+}
+
+#rcs a{
+	color:white;
+}
+
+.overflow {overflow:auto; overflow-x:hidden;}
+
+ul.pagination li.current a { background: #c60f13;border: 1px solid #7f0a0c; color: white; font-weight: bold; cursor: default; }
+ul.pagination li.current a:hover{ background-color: #970b0e;} 
+
+.nav-bar > li.has-flyout > a:first-child { padding-right: 40px; position: relative;cursor:pointer; }
+
+.font-w1{
+	color:white;
+	font-size:18pt;
+	font-weight:bolder;
+}
+
+.b-pad{
+padding-bottom:15px;
+}
+
+.dark{
+ background-color:#222222;
+ color:white;
+}

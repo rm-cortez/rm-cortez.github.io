@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+    
+    <title>NLP-Python NLTK</title>
+
+<meta charset=utf-8>
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+<meta name="viewport" content="width=device-width" />
+<meta name="Author" content="Ronald Cortez, RCSproductions US">
+<meta name="Language" content="en-us">
+
+<link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+<link rel="stylesheet" type="text/css" href="./foundation_css/foundation.css"/>
+<link rel="stylesheet" type="text/css" href="./foundation_css/smallTouches.css"/>
+
+
+
+<style>
+li > button {
+  background:#616a6b;
+  color:#fff;
+}
+
+.current button {
+    background: #c60f13;
+    color: #fff;
+}
+
+
+li > button:hover{
+  cursor: pointer;
+} 
+
+  @media all and (max-width:767px){
+    #myModal  .h2-acknowledgment{
+      font-size: 30px;
+    }
+  }
+  </style>
+
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+<script src="javascripts/jquery.js"></script>
+<script src="javascripts/jquery.foundation.mediaQueryToggle.js"></script>
+<script src="javascripts/jquery.foundation.forms.js"></script>
+<script src="javascripts/jquery.foundation.reveal.js"></script>
+<script src="javascripts/jquery.foundation.orbit.js"></script>
+<script src="javascripts/jquery.foundation.navigation.js"></script>
+<script src="javascripts/jquery.foundation.buttons.js"></script>
+<script src="javascripts/jquery.foundation.tabs.js"></script>
+<script src="javascripts/jquery.foundation.tooltips.js"></script>
+<script src="javascripts/jquery.foundation.accordion.js"></script>
+<script src="javascripts/jquery.placeholder.js"></script>
+<script src="javascripts/jquery.foundation.alerts.js"></script>
+<script src="javascripts/jquery.foundation.topbar.js"></script>
+<script src="javascripts/jquery.foundation.joyride.js"></script>
+<script src="javascripts/jquery.foundation.clearing.js"></script>
+<script src="javascripts/jquery.foundation.magellan.js"></script>
+
+<script type='text/javascript' src="./javascripts/jquery.flexslider.js"></script>
+<script type='text/javascript' src="./javascripts/jquery.flexslider-min.js"></script>
+<script type='text/javascript' src="./javascripts/flexslider.js"></script>
+
+  </head>
+  <body>
+    <div class="alert-box success">
+      RCSProductions 
+    </div>
+
+<div class="row logo-bg">
+  <div class="eleven columns pad-bot">
+    <a><img src="./images/sentiment.png"/></a>
+  </div>
+  <hr/>
+    <ul class="nav-bar blk">
+      <li class="active red"><a><b>CMPT-495 (NLP)</b></a></li>
+      <li class="border has-flyout">
+        <a data-reveal-id="myModal"><b>Acknowledgment</b></a>
+      </li>  
+    </ul>
+</div>
+
+
+<div class="row">
+  <div class="twelve columns panel callout rad">
+    <div class="nine columns centered">
+      <div id="featured">
+        <img src="./images/green-l.png" alt="slide image">
+        <img src="./images/snow-l.png" alt="slide image">
+        <img src="./images/tdkr-l.png" alt="slide image">
+        <img src="./images/thor-l.png" alt="slide image">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="twelve columns main-bg">
+    <h3 class="font-w">Review it!</h3>
+<div class="row">
+  <div class="four columns">
+    <div class="row pad-lr">
+        <div class="twelve columns l-pan center" style="min-height: 370px;">
+          <a><img src="./images/thor.jpg" id="movieImg"/></a>
+        </div><br/>
+    </div>
+    </div>
+      <div class="eight columns">
+        <div class="row pad-lr">
+          <div class="twelve columns r-pan" target="_self">
+            <br/>
+              
+              <label class="font-w">Movie:</label>
+              <div class="row">
+                <div class="six columns">
+                  <input type="text" readonly="readonly" value="Thor" id="movie"/>
+                </div>
+              </div>
+                <textarea maxlength="50000" placeholder="Must enter text" name="text" required></textarea>
+          <div class="row">
+            <div class="twelve columns">
+              <input type="button" class="radious button alert expand" value="Rate it" onClick="rateIt()"/>
+              
+              </div>
+          </div>
+          </div><br/>
+        </div>
+      </div>
+</div><br/>      
+      <div class="row"> 
+        <div class="two columns centered center" >
+          <ul class="pagination">
+            <li id="thor" class="current"><button onClick="paginate(event,'thor')">1</button></li>
+            <li id="green"><button id="green" onClick="paginate(event,'green')">2</button></li>
+            <li id="snow"><button id="snow" onClick="paginate(event,'snow')">3</button></li>
+            <li id="tdkr"><button id="tdkr" onClick="paginate(event,'tdkr')">4</button></li>
+          </ul>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+<div id="myModal" class="reveal-modal">
+    <h2 class="h2-acknowledgment">Acknowledgment</h2>
+    <p class="lead"><b>Foundation Zurb</b> (Framework)
+    <br/>
+    <b>Python NLTK</b> (Provided by: processing-text.com)<br/>
+    MSU-2012
+    </p>
+    <a href="/">RCSProductions | <span id="span-year"></span></a><br/><br/>
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
+
+
+
+
+<div class="panel center" id="rcs">
+    <a href="/">RCSProductions | <span id="spanYear"></span></a>
+   </div>
+
+<script src="javascripts/init-orbit.js"></script>
+<script>
+
+var dt = (new Date()).getUTCFullYear()
+document.querySelector('#span-year').innerHTML = dt
+document.querySelector('#spanYear').innerHTML = dt
+
+
+function rateIt(){
+ console.log('stupid')
+
+
+ var txt = document.querySelector('textArea').value
+
+ if(txt.length == 0){
+
+  alert('An opinion must be provided')
+
+ }
+
+ else{
+ 
+
+ var data = new FormData();
+ data.append( "text", txt );
+
+console.log(data)
+
+
+fetch('http://text-processing.com/api/sentiment/',{
+    method:'POST',
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+    body:JSON.stringify({text:`this is stupid`})
+})
+.then(response => response.json())
+.then(response => console.log(response))
+
+
+
+}
+
+}
+
+
+function paginate(event,movie){
+
+ 
+ console.log('pi stupido- very estupido',movie)
+
+document.querySelector('li#thor').classList.remove('current')
+document.querySelector('li#green').classList.remove('current')
+document.querySelector('li#snow').classList.remove('current')  
+document.querySelector('li#tdkr').classList.remove('current')
+
+if( movie == 'thor'){
+  document.querySelector('#movie').value = 'Thor'
+  document.querySelector('#movieImg').src = './images/thor.jpg'
+  document.querySelector('li#thor').classList.add('current')
+}
+
+else if ( movie == 'green'){
+  document.querySelector('#movie').value = 'Green Lantern'
+ document.querySelector('#movieImg').src = './images/green.jpg'
+ document.querySelector('li#green').classList.add('current')
+}
+
+else if ( movie == 'snow'){
+  document.querySelector('#movie').value = 'Snow White & The Hunstman'
+ document.querySelector('#movieImg').src = './images/snow.jpg'
+ document.querySelector('li#snow').classList.add('current')
+}
+
+else{
+  document.querySelector('#movie').value = 'The Dark Knight Rises'
+ document.querySelector('#movieImg').src = './images/tdkr.jpg'
+ document.querySelector('li#tdkr').classList.add('current')
+}
+
+}
+</script> 
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36533527-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+
+</html>

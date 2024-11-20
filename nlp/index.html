@@ -34,6 +34,11 @@ li > button {
 
 li > button:hover{
   cursor: pointer;
+}
+
+.stupid{
+
+ display:none;
 } 
 
   @media all and (max-width:767px){
@@ -102,7 +107,24 @@ li > button:hover{
     </div>
   </div>
 </div>
+<div class="row stupid">
 
+  <div class="twelve columns">
+    <fieldset id="fieldset" class="b-pad t-pad" style="background:#fff">
+      <legend class="dark">Json</legend>
+  
+{
+    "probability": {
+        "neg": 0.83321492494164429,
+        "neutral": 0.040486688193521914,
+        "pos": 0.16678507505835577
+    },
+    "label": "neutral"
+}
+    </fieldset>
+  </div>
+  
+</div>
 <div class="row">
   <div class="twelve columns main-bg">
     <h3 class="font-w">Review it!</h3>
@@ -177,7 +199,7 @@ document.querySelector('#spanYear').innerHTML = dt
 
 
 function rateIt(){
- console.log('stupid')
+ 
 
 
  var txt = document.querySelector('textArea').value
@@ -191,12 +213,7 @@ function rateIt(){
  else{
  
 
- var data = new FormData();
- data.append( "text", txt );
-
-console.log(data)
-
-
+/*
 fetch('http://text-processing.com/api/sentiment/',{
     method:'POST',
     headers: {
@@ -208,7 +225,9 @@ fetch('http://text-processing.com/api/sentiment/',{
 .then(response => response.json())
 .then(response => console.log(response))
 
+*/
 
+document.querySelector('div.stupid').classList.remove('stupid')
 
 }
 

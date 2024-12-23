@@ -6990,6 +6990,13 @@ struct ContentView: View {
     }
 }
 
+to adjust image to scale 
+element.style {
+    width: 100%;
+    height: auto;
+    border-radius: 100%;
+}
+
 
 //Image View
 - Add image to assets folder

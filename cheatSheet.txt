@@ -16704,3 +16704,22 @@ meteor
 
 npm install -g meteor --foreground-script
 
+----------
+nextjs 
+
+
+npx create-next-app@latest
+cd project
+npm run dev 
+
+Create the public folder (optional)
+You can optionally create a public folder at the root of your project to store static assets such as images, fonts, etc. 
+Files inside public can then be referenced by your code starting from the base URL (/).
+
+
+
+
+
+
+
+

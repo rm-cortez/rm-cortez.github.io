@@ -16716,6 +16716,20 @@ Create the public folder (optional)
 You can optionally create a public folder at the root of your project to store static assets such as images, fonts, etc. 
 Files inside public can then be referenced by your code starting from the base URL (/).
 
+to deploy 
+
+/Users/ronaldcortez/Documents/projects/nextjs/next.config.ts
+
+add 
+output: 'export' 
+
+
+npm run build 
+
+
+con videitos 
+se condiciono  solo 
+
 
 
 
